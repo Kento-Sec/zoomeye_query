@@ -1,6 +1,10 @@
 # zoomeye_query
 调用zoomeye开放的api接口进行查询
 
+使用之前python环境需要安装zoomeye：
+
+
+sudo pip3 install zoomeye
 使用方法：
 
 python zoomeye_query.py

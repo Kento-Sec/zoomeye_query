@@ -8,5 +8,6 @@ python zoomeye_query.py
 *注意：使用前需要在脚本的第8、9行添加zoomeye账户及密码（因此不建议把脚本放到vps上，或者可以注册一个新的账户，但同样存在手机号码会被泄露的风险）
 
 self.username = ""
+
 self.password = ""
 

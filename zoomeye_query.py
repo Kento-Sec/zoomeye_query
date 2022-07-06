@@ -65,7 +65,8 @@ class ZoomEye(object):
                     print('[-] 错误信息 : 帐户已中断，超过最大限制')
                     break
                 else:
-                    print('[-] 错误信息 : ', str(e))
+                    print('\033[32m[o][*] 没有结果了～ \033[0m')
+                    break
         print("\033[32m[o]搜索完成！\033[0m")
         pass
 

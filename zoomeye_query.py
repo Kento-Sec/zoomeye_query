@@ -27,7 +27,7 @@ class ZoomEye(object):
             access_token = r_decoded['access_token']
             self.access_token = access_token
         except:
-            print('[-] 错误信息 : 用户名或密码错误，请重试 ')
+            print('\033[31m[-] 错误信息 : 用户名或密码错误，请重试\033[0m')
             exit()
 
     def search(self):
@@ -50,10 +50,11 @@ class ZoomEye(object):
                 msg = '\033[32m[o][{}/{}] 正在获取第{}页...\033[0m'.format(index+1, num, page)
                 print(msg)
                 api = 'https://api.zoomeye.org/host/search'
-                print('\033[32m[o][*] zoomeye正在查询==>{}\033[0m'.format(query))
+                print('\033[32m[o][*] zoomeye正在查询==>   {}\033[0m'.format(query))
                 page += 1
                 index += 1
                 resp = requests.get(api, headers=headers, params={"query": query, "page": page})
+                # print(resp.text)
                 r_decoded = json.loads(resp.text)
                 for x in r_decoded['matches']:
                     print(x['ip'], ':', x['portinfo']['port'])
@@ -62,7 +63,7 @@ class ZoomEye(object):
 
             except Exception as e:
                 if str(e) == 'matches':
-                    print('[-] 错误信息 : 帐户已中断，超过最大限制')
+                    print('\033[31m[-] 错误信息 : 帐户已中断，超过最大限制\033[0m')
                     break
                 else:
                     print('\033[32m[o][*] 没有结果了～ \033[0m')

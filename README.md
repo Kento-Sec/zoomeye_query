@@ -5,6 +5,7 @@
 
 
 sudo pip3 install zoomeye
+
 使用方法：
 
 python zoomeye_query.py

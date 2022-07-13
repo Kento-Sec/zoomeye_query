@@ -1,6 +1,6 @@
 # zoomeye_query
 
-这个项目已经重构了，增加了一个核心功能以及增强代码的健壮性，也是因此新版不方便更新出来，但这个版本还能用。将计划使用golang来重新实现，到时候会放出来并增加其他的功能。
+请移步到golang版本：https://github.com/Kento-Sec/ZoomF
 
 调用zoomeye开放的api接口进行查询
 
